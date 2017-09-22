@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_ac_unit_black_24dp"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_icon"
+            android:text="Thu - Sep - 21"
+            android:textSize="21sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_situation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_toRightOf="@id/iv_icon"
+            android:text="light rain"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/tv_day_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18/14"
+            android:textSize="22sp"
+            android:layout_below="@+id/tv_situation"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_marginRight="20dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>
