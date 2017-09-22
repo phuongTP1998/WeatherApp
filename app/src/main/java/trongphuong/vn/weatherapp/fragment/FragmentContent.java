@@ -86,15 +86,15 @@ public class FragmentContent extends Fragment implements View.OnClickListener {
         });
             rvContent = (RecyclerView) view.findViewById(R.id.rv_content);
             Log.d("data ", "" + dataWeatherModelJSONs.size());
-            adapterFragmentContent = new AdapterFragmentContent(dataWeatherModelJSONs, getContext());
+            adapterFragmentContent = new AdapterFragmentContent(dataWeatherModelJSONs, getContext(),getActivity().getSupportFragmentManager(),this);
             rvContent.setLayoutManager(new LinearLayoutManager(getContext()));
             rvContent.setAdapter(adapterFragmentContent);
-//            adapterFragmentContent.setOnItemClick(this);
+            adapterFragmentContent.setOnItemClick(this);
     }
 
     @Override
     public void onClick(View view) {
-        DataModel dataWeatherModelJSON = (DataModel) view.getTag();
-        Log.d("tag ",""+ view.getTag());
+        DataModel data = (DataModel) view.getTag();
+        Log.d("tag ","" + data.getDt_txt());
     }
 }
